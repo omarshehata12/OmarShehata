@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,7 @@
             margin: 0;
             padding: 0;
         }
+
         .dashboard-container {
             background: white;
             padding: 25px;
@@ -27,9 +29,11 @@
             min-height: 800px;
             transition: 0.3s ease-in-out;
         }
+
         .dashboard-container:hover {
             transform: scale(1.02);
         }
+
         .adhkar-btn {
             display: block;
             width: 80%;
@@ -44,9 +48,11 @@
             font-weight: bold;
             text-align: center;
         }
+
         .adhkar-btn:hover {
             background-color: #1b7c83;
         }
+
         .adhkar-container {
             display: none;
             text-align: right;
@@ -56,11 +62,13 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
         .adhkar-container p {
             font-size: 18px;
             margin-bottom: 10px;
             font-weight: bold;
         }
+
         .logout-button {
             display: block;
             width: 40%;
@@ -76,42 +84,68 @@
             cursor: pointer;
             font-weight: bold;
         }
+
         .social-icons {
             margin-top: 20px;
         }
+
         .social-icons a img {
-            width: 32px; /* تصغير حجم الأيقونات */
+            width: 32px;
+            /* تصغير حجم الأيقونات */
             height: 32px;
             margin: 5px;
             transition: 0.3s;
         }
+
         .social-icons a img:hover {
             transform: scale(1.1);
         }
+        .counter-button {
+    background-color: #ef3dff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.counter-button:hover {
+    background-color: #e68900;
+}
+
     </style>
 </head>
+
 <body>
     <div class="dashboard-container" id="dashboard">
         <h2>تقبل الله صيامكم <br> omar shehata🖤</h2>
         <iframe width="100%" height="300" src="https://www.youtube.com/embed/XAxt-3fZ7Jg" allowfullscreen></iframe>
-        
+
         <button class="adhkar-btn" onclick="startAdhkar('morning')">أذكار الصباح</button>
         <div id="morning-adhkar" class="adhkar-container"></div>
-        
+
         <button class="adhkar-btn" onclick="startAdhkar('evening')">أذكار المساء</button>
         <div id="evening-adhkar" class="adhkar-container"></div>
-        
+
         <button class="logout-button" onclick="logout()">تسجيل الخروج</button>
         <div class="social-icons">
-            <a href="https://wa.me/qr/J6BDWBGNYGEKI1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
-            <a href="https://www.facebook.com/share/1DEzb2Fq4T/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/omar_shehata_1?igsh=MXdrbzY2enE3YmVhYw==" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-            <a href="http://t.me/OMAR_M_SHEHATA" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram"></a>
-            <a href="https://www.tiktok.com/@omar_m.shehata?_t=ZS-8uUfGvZvsUk&_r=1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" alt="TikTok"></a>
+            <a href="https://wa.me/qr/J6BDWBGNYGEKI1" target="_blank"><img
+                    src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+            <a href="https://www.facebook.com/share/1DEzb2Fq4T/" target="_blank"><img
+                    src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/omar_shehata_1?igsh=MXdrbzY2enE3YmVhYw==" target="_blank"><img
+                    src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="http://t.me/OMAR_M_SHEHATA" target="_blank"><img
+                    src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram"></a>
+            <a href="https://www.tiktok.com/@omar_m.shehata?_t=ZS-8uUfGvZvsUk&_r=1" target="_blank"><img
+                    src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" alt="TikTok"></a>
         </div>
     </div>
 
-    
+
     <script>
         const adhkarData = {
             morning: [
@@ -136,7 +170,7 @@
                 { text: "اللهم أنت ربي لا إله إلا أنت، خلقتني وأنا عبدك وأنا على عهدك ووعدك ما استطعت، أعوذ بك من شر ما صنعت، أبوء لك بنعمتك علي وأبوء بذنبي فاغفر لي، فإنه لا يغفر الذنوب إلا أنت.", repeat: 1 }
             ],
             evening: [
-            { text: " اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ", repeat: 1 },
+                { text: " اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ", repeat: 1 },
                 { text: "{قُلْ هُوَ اللَّهُ أَحَدٌ (1) اللَّهُ الصَّمَدُ (2) لَمْ يَلِدْ وَلَمْ يُولَدْ (3) وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ (4) }", repeat: 3 },
                 { text: "{قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ (1) مِن شَرِّ مَا خَلَقَ (2) وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ (3) وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ (4) وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ (5) }", repeat: 3 },
                 { text: "{قُلْ أَعُوذُ بِرَبِّ النَّاسِ (1) مَلِكِ النَّاسِ (2) إِلَـٰهِ النَّاسِ (3) مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ (4) الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ (5) مِنَ الْجِنَّةِ وَالنَّاسِ (6) }", repeat: 3 },
@@ -163,7 +197,7 @@
             adhkarDiv.innerHTML = "";
             adhkarDiv.style.display = "block";
             let index = 0;
-            
+
             function showNextZekr() {
                 if (index < adhkarData[type].length) {
                     let zekr = adhkarData[type][index];
@@ -171,6 +205,7 @@
                     let counter = zekr.repeat;
                     let button = document.createElement("button");
                     button.textContent = `عدد المرات: (${counter})`;
+                    button.className = "counter-button";
                     button.onclick = function () {
                         counter--;
                         button.textContent = `عدد المرات: (${counter})`;
@@ -179,6 +214,7 @@
                             showNextZekr();
                         }
                     };
+
                     paragraph.textContent = zekr.text;
                     adhkarDiv.appendChild(paragraph);
                     adhkarDiv.appendChild(button);
@@ -192,4 +228,5 @@
         }
     </script>
 </body>
+
 </html>
