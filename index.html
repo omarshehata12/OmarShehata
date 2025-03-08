@@ -102,22 +102,23 @@
         .social-icons a img:hover {
             transform: scale(1.1);
         }
-        .counter-button {
-    background-color: #ef3dff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.counter-button:hover {
-    background-color: #e68900;
-}
 
+        .counter-button {
+            background-color: #ef3dff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .counter-button:hover {
+            background-color: #e68900;
+        }
     </style>
 </head>
 
@@ -170,6 +171,7 @@
                 { text: "استغفر الله الذي لا إله إلا هو الحي القيوم، وأتوب إليه.", repeat: 3 },
                 { text: "اللهم إني أصبحت أشهدك وأشهد حملة عرشك وملائكتك وجميع خلقك أنك أنت الله لا إله إلا أنت وحدك لا شريك لك، وأن محمدًا عبدك ورسولك.", repeat: 4 },
                 { text: "اللهم أنت ربي لا إله إلا أنت، خلقتني وأنا عبدك وأنا على عهدك ووعدك ما استطعت، أعوذ بك من شر ما صنعت، أبوء لك بنعمتك علي وأبوء بذنبي فاغفر لي، فإنه لا يغفر الذنوب إلا أنت.", repeat: 1 },
+                { text: "اللهم اغفر ل أحمد مسعد اخى فى الله", repeat: 3 },
                 { text: " لا اله الا الله وحده لا شريك له له الملك وله الحمد وهو على كل شئ قدير", repeat: 100 },
                 { text: "سبحان والحمد لله و لا اله الا الله والله اكبر", repeat: 100 },
                 { text: "استغفر الله ", repeat: 100 },
@@ -197,6 +199,7 @@
                 { text: "استغفر الله الذي لا إله إلا هو الحي القيوم، وأتوب إليه.", repeat: 3 },
                 { text: "اللهم إني أمسيت أشهدك وأشهد حملة عرشك وملائكتك وجميع خلقك أنك أنت الله لا إله إلا أنت وحدك لا شريك لك، وأن محمدًا عبدك ورسولك.", repeat: 4 },
                 { text: "اللهم أنت ربي لا إله إلا أنت، خلقتني وأنا عبدك وأنا على عهدك ووعدك ما استطعت، أعوذ بك من شر ما صنعت، أبوء لك بنعمتك علي وأبوء بذنبي فاغفر لي، فإنه لا يغفر الذنوب إلا أنت.", repeat: 1 },
+                { text: "اللهم اغفر ل أحمد مسعد اخى فى الله", repeat: 3 },
                 { text: "لا اله الا الله وحده لا شريك له له الملك وله الحمد وهو على كل شئ قدير", repeat: 100 },
                 { text: "سبحان والحمد لله و لا اله الا الله والله اكبر", repeat: 100 },
                 { text: "استغفر الله ", repeat: 100 },
@@ -207,40 +210,40 @@
         };
 
         function startAdhkar(type) {
-    const adhkarDiv = document.getElementById(`${type}-adhkar`);
-    adhkarDiv.innerHTML = "";
-    adhkarDiv.style.display = "block";
-    let index = 0;
+            const adhkarDiv = document.getElementById(`${type}-adhkar`);
+            adhkarDiv.innerHTML = "";
+            adhkarDiv.style.display = "block";
+            let index = 0;
 
-    function showNextZekr() {
-        if (index < adhkarData[type].length) {
-            let zekr = adhkarData[type][index];
-            let paragraph = document.createElement("p");
-            let counter = zekr.repeat;
-            let button = document.createElement("button");
-            button.textContent = `عدد المرات: (${counter})`;
-            button.className = "counter-button";
-            button.onclick = function () {
-                if (counter > 0) {
-                    counter--;
-                    button.textContent = `عدد المرات: (${counter})`;
-                    if (counter <= 0) {
-                        // alert("✅ لقد أتممت هذا الذكر، تقبل الله منكم❤️");
-                        index++;
-                        setTimeout(showNextZekr, 500);
-                    }
+            function showNextZekr() {
+                if (index < adhkarData[type].length) {
+                    let zekr = adhkarData[type][index];
+                    let paragraph = document.createElement("p");
+                    let counter = zekr.repeat;
+                    let button = document.createElement("button");
+                    button.textContent = ` اضغط هنا🤗: (${counter})`;
+                    button.className = "counter-button";
+                    button.onclick = function () {
+                        if (counter > 0) {
+                            counter--;
+                            button.textContent = `عدد المرات المتبقيه: (${counter})`;
+                            if (counter <= 0) {
+                                // alert("✅ لقد أتممت هذا الذكر، تقبل الله منكم❤️");
+                                index++;
+                                setTimeout(showNextZekr, 500);
+                            }
+                        }
+                    };
+
+                    paragraph.textContent = zekr.text;
+                    adhkarDiv.appendChild(paragraph);
+                    adhkarDiv.appendChild(button);
+                } else {
+                    alert("🎉 لقد أكملت جميع الأذكار، تقبل الله منك ❤️");
                 }
-            };
-
-            paragraph.textContent = zekr.text;
-            adhkarDiv.appendChild(paragraph);
-            adhkarDiv.appendChild(button);
-        } else {
-            alert("🎉 لقد أكملت جميع الأذكار، تقبل الله منك ❤️");
+            }
+            showNextZekr();
         }
-    }
-    showNextZekr();
-}
 
 
         function logout() {
