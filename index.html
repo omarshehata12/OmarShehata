@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Omar Shehata Page</title>
     <style>
         body {
@@ -24,11 +24,11 @@
             background: white;
             padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.9);
             text-align: center;
-            width: 95%;
-            max-width: 700px;
-            min-height: 800px;
+            width: 90%;
+            max-width: 250px;
+            min-height: 500px;
             transition: 0.3s ease-in-out;
         }
 
@@ -119,13 +119,18 @@
         .counter-button:hover {
             background-color: #e68900;
         }
+
+        body {
+            touch-action: manipulation;
+            overscroll-behavior: none;
+        }
     </style>
 </head>
 
 <body>
     <div class="dashboard-container" id="dashboard">
         <h2>تقبل الله صيامكم <br> omar shehata🖤</h2>
-        <iframe width="70%" height="267" src="https://www.youtube.com/embed/XAxt-3fZ7Jg" allowfullscreen></iframe>
+        <iframe width="100%" height="267" src="https://www.youtube.com/embed/XAxt-3fZ7Jg" allowfullscreen></iframe>
 
         <button class="adhkar-btn" onclick="startAdhkar('morning')">أذكار الصباح</button>
         <div id="morning-adhkar" class="adhkar-container"></div>
