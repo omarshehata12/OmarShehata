@@ -52,7 +52,7 @@
         }
 
         .adhkar-btn:hover {
-            background-color: #1b7c83;
+            background-color: #1b837a;
         }
 
         .adhkar-container {
@@ -124,7 +124,7 @@
 <body>
     <div class="dashboard-container" id="dashboard">
         <h2>تقبل الله صيامكم <br> omar shehata🖤</h2>
-        <iframe width="100%" height="300" src="https://www.youtube.com/embed/XAxt-3fZ7Jg" allowfullscreen></iframe>
+        <iframe width="70%" height="267" src="https://www.youtube.com/embed/XAxt-3fZ7Jg" allowfullscreen></iframe>
 
         <button class="adhkar-btn" onclick="startAdhkar('morning')">أذكار الصباح</button>
         <div id="morning-adhkar" class="adhkar-container"></div>
@@ -132,7 +132,7 @@
         <button class="adhkar-btn" onclick="startAdhkar('evening')">أذكار المساء</button>
         <div id="evening-adhkar" class="adhkar-container"></div>
 
-        <button class="logout-button" onclick="logout()">تسجيل الخروج</button>
+        <!-- <button class="logout-button" onclick="logout()">تسجيل الخروج</button> -->
         <div class="social-icons">
             <a href="https://wa.me/qr/J6BDWBGNYGEKI1" target="_blank"><img
                     src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
@@ -169,7 +169,13 @@
                 { text: "سبحان الله وبحمده، زنة عرشه ورضا نفسه وزنة عرشه ومداد كلماته.", repeat: 3 },
                 { text: "استغفر الله الذي لا إله إلا هو الحي القيوم، وأتوب إليه.", repeat: 3 },
                 { text: "اللهم إني أصبحت أشهدك وأشهد حملة عرشك وملائكتك وجميع خلقك أنك أنت الله لا إله إلا أنت وحدك لا شريك لك، وأن محمدًا عبدك ورسولك.", repeat: 4 },
-                { text: "اللهم أنت ربي لا إله إلا أنت، خلقتني وأنا عبدك وأنا على عهدك ووعدك ما استطعت، أعوذ بك من شر ما صنعت، أبوء لك بنعمتك علي وأبوء بذنبي فاغفر لي، فإنه لا يغفر الذنوب إلا أنت.", repeat: 1 }
+                { text: "اللهم أنت ربي لا إله إلا أنت، خلقتني وأنا عبدك وأنا على عهدك ووعدك ما استطعت، أعوذ بك من شر ما صنعت، أبوء لك بنعمتك علي وأبوء بذنبي فاغفر لي، فإنه لا يغفر الذنوب إلا أنت.", repeat: 1 },
+                { text: " لا اله الا الله وحده لا شريك له له الملك وله الحمد وهو على كل شئ قدير", repeat: 100 },
+                { text: "سبحان والحمد لله و لا اله الا الله والله اكبر", repeat: 100 },
+                { text: "استغفر الله ", repeat: 100 },
+                { text: "اللهم صل على سيدنا محمد", repeat: 100 },
+
+
             ],
             evening: [
                 { text: " اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ", repeat: 1 },
@@ -190,40 +196,52 @@
                 { text: "سبحان الله وبحمده، زنة عرشه ورضا نفسه وزنة عرشه ومداد كلماته.", repeat: 3 },
                 { text: "استغفر الله الذي لا إله إلا هو الحي القيوم، وأتوب إليه.", repeat: 3 },
                 { text: "اللهم إني أمسيت أشهدك وأشهد حملة عرشك وملائكتك وجميع خلقك أنك أنت الله لا إله إلا أنت وحدك لا شريك لك، وأن محمدًا عبدك ورسولك.", repeat: 4 },
-                { text: "اللهم أنت ربي لا إله إلا أنت، خلقتني وأنا عبدك وأنا على عهدك ووعدك ما استطعت، أعوذ بك من شر ما صنعت، أبوء لك بنعمتك علي وأبوء بذنبي فاغفر لي، فإنه لا يغفر الذنوب إلا أنت.", repeat: 1 }
+                { text: "اللهم أنت ربي لا إله إلا أنت، خلقتني وأنا عبدك وأنا على عهدك ووعدك ما استطعت، أعوذ بك من شر ما صنعت، أبوء لك بنعمتك علي وأبوء بذنبي فاغفر لي، فإنه لا يغفر الذنوب إلا أنت.", repeat: 1 },
+                { text: "لا اله الا الله وحده لا شريك له له الملك وله الحمد وهو على كل شئ قدير", repeat: 100 },
+                { text: "سبحان والحمد لله و لا اله الا الله والله اكبر", repeat: 100 },
+                { text: "استغفر الله ", repeat: 100 },
+                { text: "اللهم صل على سيدنا محمد", repeat: 100 },
+
+
             ]
         };
 
         function startAdhkar(type) {
-            const adhkarDiv = document.getElementById(`${type}-adhkar`);
-            adhkarDiv.innerHTML = "";
-            adhkarDiv.style.display = "block";
-            let index = 0;
+    const adhkarDiv = document.getElementById(`${type}-adhkar`);
+    adhkarDiv.innerHTML = "";
+    adhkarDiv.style.display = "block";
+    let index = 0;
 
-            function showNextZekr() {
-                if (index < adhkarData[type].length) {
-                    let zekr = adhkarData[type][index];
-                    let paragraph = document.createElement("p");
-                    let counter = zekr.repeat;
-                    let button = document.createElement("button");
+    function showNextZekr() {
+        if (index < adhkarData[type].length) {
+            let zekr = adhkarData[type][index];
+            let paragraph = document.createElement("p");
+            let counter = zekr.repeat;
+            let button = document.createElement("button");
+            button.textContent = `عدد المرات: (${counter})`;
+            button.className = "counter-button";
+            button.onclick = function () {
+                if (counter > 0) {
+                    counter--;
                     button.textContent = `عدد المرات: (${counter})`;
-                    button.className = "counter-button";
-                    button.onclick = function () {
-                        counter--;
-                        button.textContent = `عدد المرات: (${counter})`;
-                        if (counter === 0) {
-                            index++;
-                            showNextZekr();
-                        }
-                    };
-
-                    paragraph.textContent = zekr.text;
-                    adhkarDiv.appendChild(paragraph);
-                    adhkarDiv.appendChild(button);
+                    if (counter <= 0) {
+                        // alert("✅ لقد أتممت هذا الذكر، تقبل الله منكم❤️");
+                        index++;
+                        setTimeout(showNextZekr, 500);
+                    }
                 }
-            }
-            showNextZekr();
+            };
+
+            paragraph.textContent = zekr.text;
+            adhkarDiv.appendChild(paragraph);
+            adhkarDiv.appendChild(button);
+        } else {
+            alert("🎉 لقد أكملت جميع الأذكار، تقبل الله منك ❤️");
         }
+    }
+    showNextZekr();
+}
+
 
         function logout() {
             window.location.href = "index.html";
